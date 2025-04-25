@@ -23,6 +23,14 @@ public class App {
         cV.printPersonas(personas);
         pC.sortByDireccionCodigo(personas);
         cV.printPersonas(personas);
+        Persona personaB = pC.findPersonByCodigoDireccion(personas, 89);
+
+        if (personaB == null) {
+            System.out.println(" No hay");
+        } else {
+            System.out.println("Se encontró");
+            System.out.println(personaB);
+        }
 
     }
 }

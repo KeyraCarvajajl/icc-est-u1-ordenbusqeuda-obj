@@ -39,6 +39,15 @@ public class Persona {
         return dirección.getCodigo();
     }
 
+    public boolean equalsByCodigoDireccion(Persona otraPersona){
+        boolean resp = this.getCodigoDrireccion() > otraPersona.getCodigoDrireccion();
+        return resp;
+    }
+
+    public boolean equalsByCodigoDireccion(int codigoDirección) {
+        return getCodigoDrireccion() == codigoDirección;
+    }
+
     @Override
     public String toString() {
         return "Persona [nombre=" + nombre + ", edad=" + edad + ", dirección=" + dirección + "]";
